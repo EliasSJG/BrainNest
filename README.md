@@ -1,2 +1,3 @@
 # BrainNest
-Slutproject för agilt arbete
+
+A place to expand your ideas
