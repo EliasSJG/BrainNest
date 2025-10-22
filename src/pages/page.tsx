@@ -10,7 +10,6 @@ export default function Page() {
   const { id } = useParams();
   const [content, setContent] = React.useState<string>("");
 
-  // Load the document content on mount
   useEffect(() => {
     const docs: DocumentProps[] = JSON.parse(
       localStorage.getItem("documents") || "[]"
@@ -19,7 +18,6 @@ export default function Page() {
     if (doc) setContent(doc.content);
   }, [id]);
 
-  // Save content to localStorage every time it changes
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newContent = e.target.value;
     setContent(newContent);
